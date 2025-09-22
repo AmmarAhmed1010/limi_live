@@ -122,7 +122,7 @@ export default function SavedConfigurations({ isARView = false }) {
     setIsLoading(true);
     try {
       const response = await fetch(
-        "https://dev.api1.limitless-lighting.co.uk/admin/products/users/light-configs",
+        "https://api1.limitless-lighting.co.uk/admin/products/users/light-configs",
         {
           method: "POST",
           headers: {
@@ -154,7 +154,7 @@ export default function SavedConfigurations({ isARView = false }) {
       setIsDeleting(true);
       try {
         const response = await fetch(
-          `https://dev.api1.limitless-lighting.co.uk/admin/products/light-configs/${configId}`,
+          `https://api1.limitless-lighting.co.uk/admin/products/light-configs/${configId}`,
           {
             method: "DELETE",
           }
@@ -471,7 +471,7 @@ export default function SavedConfigurations({ isARView = false }) {
                   <div className="bg-[#1a1a1a] rounded-xl p-4 border border-gray-800 shadow-lg">
                     <div className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
                       <Image
-                        src={`https://dev.api1.limitless-lighting.co.uk${selectedConfig.thumbnail?.url}`}
+                        src={`https://api1.limitless-lighting.co.uk${selectedConfig.thumbnail?.url}`}
                         alt={selectedConfig.name || "Configuration"}
                         fill
                         aspectRatio="1/1"

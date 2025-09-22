@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_BASE = 'https://dev.api1.limitless-lighting.co.uk/admin/products/light-configs/wishlist';
+const API_BASE = 'https://api1.limitless-lighting.co.uk/admin/products/light-configs/wishlist';
 
 const getToken = () => localStorage.getItem('limiToken');
 

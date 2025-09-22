@@ -243,7 +243,7 @@ export default function SlideCarousel({ slides, customerId }) {
   // Send session data to API
   const sendSessionToAPI = async (sessionData) => {
     try {
-      const response = await fetch('https://dev.api1.limitless-lighting.co.uk/client/user/slide_shows/analytics', {
+      const response = await fetch('https://api1.limitless-lighting.co.uk/client/user/slide_shows/analytics', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

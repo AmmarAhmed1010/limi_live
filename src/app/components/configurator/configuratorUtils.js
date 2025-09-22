@@ -103,7 +103,7 @@ export const getDefaultPendantAssignments = (amount) => {
     hasSilver: false,
     hasGold: true,
     modelUrl:
-      "https://dev.api1.limitless-lighting.co.uk/configurator_dynamic/models/model_1756460850615.glb",
+      "https://api1.limitless-lighting.co.uk/configurator_dynamic/models/model_1756460850615.glb",
   };
 
   switch (amount) {

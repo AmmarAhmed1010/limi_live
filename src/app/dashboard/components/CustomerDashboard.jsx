@@ -170,7 +170,7 @@ export default function CustomerDashboard({ token }) {
     setPendantLoading(true);
     try {
       const response = await fetch(
-        "https://dev.api1.limitless-lighting.co.uk/admin/configurator/system",
+        "https://api1.limitless-lighting.co.uk/admin/configurator/system",
         {
           method: "GET",
           headers: {
@@ -234,7 +234,7 @@ export default function CustomerDashboard({ token }) {
         console.log(pair[0], pair[1]);
       }
       const response = await fetch(
-        `https://dev.api1.limitless-lighting.co.uk/admin/configurator/system/${id}`,
+        `https://api1.limitless-lighting.co.uk/admin/configurator/system/${id}`,
         {
           method: "PATCH",
           headers: {
@@ -262,7 +262,7 @@ export default function CustomerDashboard({ token }) {
     setPendantSaving(true);
     try {
       const response = await fetch(
-        `https://dev.api1.limitless-lighting.co.uk/admin/configurator/system/${id}`,
+        `https://api1.limitless-lighting.co.uk/admin/configurator/system/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -316,7 +316,7 @@ export default function CustomerDashboard({ token }) {
       }
 
       const response = await fetch(
-        "https://dev.api1.limitless-lighting.co.uk/admin/configurator/system",
+        "https://api1.limitless-lighting.co.uk/admin/configurator/system",
         {
           method: "POST",
           headers: {
@@ -469,7 +469,7 @@ export default function CustomerDashboard({ token }) {
 
     try {
       const response = await fetch(
-        "https://dev.api1.limitless-lighting.co.uk/client/user/community/subscriptions",
+        "https://api1.limitless-lighting.co.uk/client/user/community/subscriptions",
         {
           method: "GET",
           headers: {
@@ -516,7 +516,7 @@ export default function CustomerDashboard({ token }) {
     setQueryError("");
     try {
       const response = await fetch(
-        "https://dev.api1.limitless-lighting.co.uk/client/user/contact-messages",
+        "https://api1.limitless-lighting.co.uk/client/user/contact-messages",
         {
           method: "GET",
           headers: {
@@ -563,7 +563,7 @@ export default function CustomerDashboard({ token }) {
 
     try {
       const response = await fetch(
-        "https://dev.api1.limitless-lighting.co.uk/client/user/distributor/contact",
+        "https://api1.limitless-lighting.co.uk/client/user/distributor/contact",
         {
           method: "GET",
           headers: {

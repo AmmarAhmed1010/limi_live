@@ -47,7 +47,7 @@ const generateDataHash = (data) => {
 // Fetch pendant/system data from API
 const fetchSystemAssignments = async () => {
   try {
-    const response = await fetch("https://dev.api1.limitless-lighting.co.uk/admin/configurator/system", {
+    const response = await fetch("https://api1.limitless-lighting.co.uk/admin/configurator/system", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

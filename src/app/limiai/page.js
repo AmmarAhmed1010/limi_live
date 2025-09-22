@@ -32,7 +32,7 @@ const LimiAIPage = () => {
     e.preventDefault();
     setSubmitStatus(null);
     try {
-      const response = await fetch("https://dev.api1.limitless-lighting.co.uk/admin/dashboard/investor_details", {
+      const response = await fetch("https://api1.limitless-lighting.co.uk/admin/dashboard/investor_details", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

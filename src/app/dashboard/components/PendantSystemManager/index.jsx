@@ -106,7 +106,7 @@ export default function PendantSystemManager({
       
       // Fallback to direct API call if the new function fails
       try {
-        const response = await fetch("https://dev.api1.limitless-lighting.co.uk/admin/configurator/system", {
+        const response = await fetch("https://api1.limitless-lighting.co.uk/admin/configurator/system", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

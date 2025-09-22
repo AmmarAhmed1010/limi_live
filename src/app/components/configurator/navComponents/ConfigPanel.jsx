@@ -178,7 +178,7 @@ export const ConfigPanel = ({
   const syncWishlistWithAPI = async (wishlistArray) => {
     const token = localStorage.getItem("limiToken");
     await fetch(
-      "https://dev.api1.limitless-lighting.co.uk/admin/products/light-configs/wishlist",
+      "https://api1.limitless-lighting.co.uk/admin/products/light-configs/wishlist",
       {
         method: "POST",
         headers: {
@@ -944,7 +944,7 @@ export const ConfigPanel = ({
                       sendMessageToPlayCanvas("color_gold");
                       sendMessageToPlayCanvas("silver_none");
                       sendMessageToPlayCanvas(
-                        "product_https://dev.api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
+                        "product_https://api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
                       );
                     }
                   } else {
@@ -962,7 +962,7 @@ export const ConfigPanel = ({
                 sendMessageToPlayCanvas("color_gold");
                 sendMessageToPlayCanvas("silver_none");
                 sendMessageToPlayCanvas(
-                  "product_https://dev.api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
+                  "product_https://api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
                 );
               });
               sendMessageToPlayCanvas("allmodelsloaded");
@@ -1443,55 +1443,7 @@ export const ConfigPanel = ({
                           : "ring-1 ring-gray-600"
                       }`}
                     >
-                      {/* Wishlist Icon Overlay */}
-                      {item.id !== "pendant" &&
-                        item.id !== "system" &&
-                        item.id !== "chandelier" &&
-                        item.id !== "bar" &&
-                        item.id !== "ball" &&
-                        item.id !== "universal" && (
-                          <button
-                            type="button"
-                            className="absolute top-1 right-1 z-10 bg-white/80 rounded-full p-1 hover:bg-rose-200 transition-all"
-                            onClick={async (e) => {
-                              e.stopPropagation();
-                              let newWishlist;
-
-                              if (favorites.some((fav) => fav.id === item.id)) {
-                                // Remove from Redux state
-                                dispatch(removeFromFavorites(item.id));
-                                // Remove from wishlist array
-                                newWishlist = favorites
-                                  .filter((fav) => fav.id !== item.id)
-                                  .map((fav) => fav.id);
-                              } else {
-                                // Add to Redux state
-                                dispatch(addToFavorites({ id: item.id }));
-                                // Add to wishlist array
-                                newWishlist = [
-                                  ...favorites.map((fav) => fav.id),
-                                  item.id,
-                                ];
-                              }
-
-                              // Sync with backend
-                              await syncWishlistWithAPI(newWishlist);
-                            }}
-                            title={
-                              favorites.some((fav) => fav.id === item.id)
-                                ? "Remove from Wishlist"
-                                : "Add to Wishlist"
-                            }
-                          >
-                            <FaHeart
-                              className={
-                                favorites.some((fav) => fav.id === item.id)
-                                  ? "text-rose-500"
-                                  : "text-gray-400"
-                              }
-                            />
-                          </button>
-                        )}
+                      
                       {item.image ? (
                         <Image
                           src={item.image}

@@ -473,7 +473,7 @@ const ConfiguratorLayout = () => {
               sendMessageToPlayCanvas("color_gold");
               sendMessageToPlayCanvas("silver_none");
               sendMessageToPlayCanvas(
-                "product_https://dev.api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
+                "product_https://api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
               );
             }
           });
@@ -1008,7 +1008,7 @@ const ConfiguratorLayout = () => {
 
       // Send data to backend API
       const response = await fetch(
-        "https://dev.api1.limitless-lighting.co.uk/admin/products/light-configs",
+        "https://api1.limitless-lighting.co.uk/admin/products/light-configs",
         {
           method: "POST",
           headers: {

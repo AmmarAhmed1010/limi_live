@@ -12,7 +12,7 @@ export default function InvestorDetails() {
         setLoading(true);
         const token = localStorage.getItem('limiToken');
         
-        const response = await fetch("https://dev.api1.limitless-lighting.co.uk/admin/dashboard/investor_details", {
+        const response = await fetch("https://api1.limitless-lighting.co.uk/admin/dashboard/investor_details", {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
