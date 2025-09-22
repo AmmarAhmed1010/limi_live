@@ -944,7 +944,7 @@ export const ConfigPanel = ({
                       sendMessageToPlayCanvas("color_gold");
                       sendMessageToPlayCanvas("silver_none");
                       sendMessageToPlayCanvas(
-                        "product_https://api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
+                        "product_https://dev.api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
                       );
                     }
                   } else {
@@ -962,7 +962,7 @@ export const ConfigPanel = ({
                 sendMessageToPlayCanvas("color_gold");
                 sendMessageToPlayCanvas("silver_none");
                 sendMessageToPlayCanvas(
-                  "product_https://api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
+                  "product_https://dev.api1.limitless-lighting.co.uk/configurator_dynamic/models/Bar_1756732230450.glb"
                 );
               });
               sendMessageToPlayCanvas("allmodelsloaded");
